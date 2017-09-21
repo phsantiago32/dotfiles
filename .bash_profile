@@ -7,20 +7,33 @@ godirectory() {
 workdirectory() {
 	cd C:/Users/PSANTIAGO/Documents/Repos;
 }
+cs() {
+    cd C:/Projects/CSharp
+}
 
 startdir() {
 	cd ~;
 }
 
+hubdir(){
+    cd C:/Hub
+}
+
 # startdir
 
 alias g='git';
+
+#function g { if [[ $# > 0 ]]; then git $@; else git status; fi; }
+
+alias hub=hubdir;
 alias godir=godirectory;
 alias workdir=workdirectory;
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias ll='ls -lGa'
 alias dir='ls'
+
+__git_complete g __git_main
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -55,7 +68,7 @@ fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	complete -o default -o nospace -F _git g;
+	 complete -o default -o nospace -F _git g;  
 fi;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
