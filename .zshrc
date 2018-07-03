@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/psantiago/.oh-my-zsh
+  export ZSH=/home/$USER/.oh-my-zsh
   export DOCKER_HOST=tcp://0.0.0.0:2375
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -107,9 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cs="cd /mnt/c/Projects/CSharp"
+alias wrk="cd /mnt/c/Projects/"
 alias ..="cd .."
 alias cl="clear"
 alias open="explorer.exe . || :"
-alias hub="cd /mnt/c/Hub"
 alias myip="curl https://www.myexternalip.com/raw"
